@@ -27,16 +27,16 @@ GOIT是这样一个技术架构：
 
 ## 目标
 
-![](images/architecture.png)
+![](/images/architecture.png)
 
 ## 计划
 
-![](images/architecture2.png)
+![](/images/architecture2.png)
 
 ## 方案
 
-![](images/architecture3.png)
+![](/images/architecture3.png)
 
 ## 实施
 
-![](images/architecture4.png)
+![](/images/architecture4.png)
