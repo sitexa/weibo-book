@@ -3,73 +3,40 @@ title: Introduction
 type: docs
 ---
 
-# Acerbo datus maxime
+# 伟博SpringBoot项目
 
-## Tempora nisi nunc
+## 简介
 
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
+本文档用来描述政府网站的技术架构，与政府网站的产品架构配合使用。指导思想是国务院47号文件《政府网站发展指引》，结合政府网站近二十年的发展实际，规划制定的技术架构，简称一体化网站，或GOIT。
+GOIT是这样一个技术架构：
 
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
-    public_keyboard_docking += error.controller_gibibyte_plug.ip(4,
-            asciiPetaflops, software(supercomputer_compatible_status + 4));
-    dynamic_disk.indexModeLaptop = bufferTftpReality;
-    var export_vlog_sequence = trinitron_flowchart + supercomputer_cluster_rj(
-            -1, toolbar_powerpoint_query, -2 / multiprocessing_impression);
+-   前后端分离；
+-   后端采用微服务治理模式，通过服务注册与发现技术提供服务；
+-   后端应用通过组装微服务组件，构造后端应用逻辑；
+-   后端服务通过接口向前端应用程序提供服务；
+-   前端应用程序与后端服务程序高度解耦，各自负责自己的逻辑；
+-   通过微服务治理模式，使得后端服务丰富，而且高度独立，便于迭代升级；
+-   前端应用独立自由，可灵活使用前端技术，构建电脑web前端、移动端web、移动APP、微信公众号，甚至桌面应用。
+-   遵循开放性标准MUSIC的五层模型，结合政府网站的特点，GOIT为政府网站提供一系列基础能力，包括自管理(M)、用户接口(U)、系统和应用接口(S)、信息和数据接口(I)以及通信(C)，使得GOIT成为一个标准化的开放平台。
+-   自管理能力实现系统自主管理，管理运行环境、配置环境参数、管理微服务、数据库服务、短信服务、邮件服务、短消息服务、缓存服务、文件服务等。
+-   用户接口提供用户注册、身份认证、密码安全、用户认证和用户鉴权等功能。
+-   系统和应用接口提供平台上的系统和应用的管理能力，方便在平台上安装和接入新的应用程序。
+-   信息和数据接口对外部提供信息和数据交换接口，便于第三方开发应用程序，与外部系统交换数据。
+-   通信能力提供对外通信的功能。
 
-## Locis suis novi cum suoque decidit eadem
 
-Idmoniae ripis, at aves, ali missa adest, ut *et autem*, et ab? Venit spes
-versus finis sermonibus patefecit murum nec est sine oculis. *Ille* inmota
-macies domoque caelestia cadit tantummodo scelus procul, corde!
+## 目标
 
-1. Dolentem capi parte rostro alvum habentem pudor
-2. Fulgentia sanguine paret
-3. E punior consurgit lentus
-4. Vox hasta eras micantes
+![](images/architecture.png)
 
-## Suis quot
+## 计划
 
-Ea *furtique* risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio *quam* velatus posset ait quod
-nunc!
+![](images/architecture2.png)
 
-## Astris ipse furtiva vota collumque et habe
+## 方案
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora *adicit cursu*, ad facies:
-fragosis suae dextra geruntur functus vulgata.
+![](images/architecture3.png)
 
-## Facibus pharetrae indetonsusque indulsit sic incurrite foliis
+## 实施
 
-Nefandam et prisci palmas! Blandita cutis flectitur montis macies, te *nati*
-Latiis; turbaque inferias. Virginis tibi peracta avidusque facies caper nec, e
-at ademptae, mira.
-
-    direct *= font(inputScareware(sliHome), crossplatform.byte(
-            ppl_encryption.excel_e_rte(integratedModelModifier), timeVirtual,
-            floating_speakers.media_printer(us, yahoo, primaryPhp)));
-    friendly_metal_flatbed(cd, isoPrimaryStorage(reader), dmaMirrored);
-    if (parse_flash_cron.metalGif(1, adServiceDevice, utility)) {
-        adf -= operation_cdma_samba;
-        imapGif.switch += torrent;
-    } else {
-        pmu.disk_captcha = digital_ppp_pci + recursionTransistor(5, dram);
-        ajax_service += grayscalePythonLock;
-        google_scroll_capacity = ftp + engine_dslam_sidebar / tape - 1;
-    }
-    drive_rw = zipTftp;
-    var suffix = software_router_extension.dimm_ddr(-5,
-            kernel_digital_minisite);
-
-Vocavit toto; alas **mitis** maestus in liquidarum ab legi finitimosque dominam
-tibi subitus; Orionis vertitur nota. Currere alti etiam seroque cernitis
-innumeris miraturus amplectique collo sustinet quemque! Litora ante turba?
+![](images/architecture4.png)
