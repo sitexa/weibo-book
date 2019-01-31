@@ -1,8 +1,8 @@
 # hugo server --themesDir ...
 
 baseURL: http://10.10.4.25
-title: Hugo Book
-theme: hugo-book
+title: "伟博SpringBoot项目"
+theme: book
 disableKinds: ["taxonomy", "taxonomyTerm"]
 # themesDir: ../..
 
