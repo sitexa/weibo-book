@@ -1,6 +1,6 @@
 # hugo server --themesDir ...
 
-baseURL: https://example.com
+baseURL: http://10.10.4.25
 title: Hugo Book
 theme: hugo-book
 disableKinds: ["taxonomy", "taxonomyTerm"]
