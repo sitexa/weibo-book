@@ -3,7 +3,7 @@ headless: true
 ---
 
 - [**项目介绍**]({{< ref "/" >}})
-- [架构]({{< ref "/docs/examples.md" >}})
+- **项目架构**
   - [产品架构]({{< ref "/docs/with-toc.md" >}})
   - [技术架构]({{< ref "/docs/without-toc.md" >}})
 - **业务模块**

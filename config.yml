@@ -1,7 +1,7 @@
 # hugo server --themesDir ...
 
 baseURL: "http://10.10.4.25/"
-title: "伟博SpringBoot项目"
+title: "伟博网站一体化项目"
 theme: "book"
 disableKinds: ["taxonomy", "taxonomyTerm"]
 # themesDir: ../..
