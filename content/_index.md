@@ -3,7 +3,7 @@ title: Introduction
 type: docs
 ---
 
-# 伟博网站一体化项目
+# 网站一体化项目
 
 ## 简介
 
