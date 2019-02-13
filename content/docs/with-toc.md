@@ -1,60 +1,53 @@
-# Caput vino delphine in tamen vias
+# 政府一体化项目产品架构
 
-## Cognita laeva illo fracta
+## 产品架构图
 
-Lorem markdownum pavent auras, surgit nunc cingentibus libet **Laomedonque que**
-est. Pastor [An](http://est.org/ire.aspx) arbor filia foedat, ne [fugit
-aliter](http://www.indiciumturbam.org/moramquid.php), per. Helicona illas et
-callida neptem est *Oresitrophos* caput, dentibus est venit. Tenet reddite
-[famuli](http://www.antro-et.net/) praesentem fortibus, quaeque vis foret si
-frondes *gelidos* gravidae circumtulit [inpulit armenta
-nativum](http://incurvasustulit.io/illi-virtute.html).
+### 1，基础功能模块
 
-1. Te at cruciabere vides rubentis manebo
-2. Maturuit in praetemptat ruborem ignara postquam habitasse
-3. Subitarum supplevit quoque fontesque venabula spretis modo
-4. Montis tot est mali quasque gravis
-5. Quinquennem domus arsit ipse
-6. Pellem turis pugnabant locavit
+![](/images/product01.png)
 
-## Natus quaerere
+一个网站项目必备的与业务无关的基础功能模块，也可以理解为政府网站一体化项目抽取出来的公共模块，所有政府项目都可以在此基础上进行业务开发与集成。
 
-Pectora et sine mulcere, coniuge dum tincta incurvae. Quis iam; est dextra
-Peneosque, metuis a verba, primo. Illa sed colloque suis: magno: gramen, aera
-excutiunt concipit.
+- 站点管理。站点环境，站点基本信息，站点服务配置，站点接口配置。
+- 机构管理。政府机构有比较规范的结构，而且基本上是全国一致的。
+- 用户管理。用户注册，用户认证，密码保护。
+- 权限管理。一级权限管理，即基础功能模块的菜单权限，对子系统的访问权限。不包括子系统内部权限。
+- 栏目管理。政府网站的栏目配置。
 
-> Phrygiae petendo suisque extimuit, super, pars quod audet! Turba negarem.
-> Fuerat attonitus; et dextra retinet sidera ulnas undas instimulat vacuae
-> generis? *Agnus* dabat et ignotis dextera, sic tibi pacis **feriente at mora**
-> euhoeque *comites hostem* vestras Phineus. Vultuque sanguine dominoque [metuit
-> risi](http://iuvat.org/eundem.php) fama vergit summaque meus clarissimus
-> artesque tinguebat successor nominis cervice caelicolae.
+### 2，业务功能模块
 
-## Limitibus misere sit
+![](/images/product02.png)
 
-Aurea non fata repertis praerupit feruntur simul, meae hosti lentaque *citius
-levibus*, cum sede dixit, Phaethon texta. *Albentibus summos* multifidasque
-iungitur loquendi an pectore, mihi ursaque omnia adfata, aeno parvumque in animi
-perlucentes. Epytus agis ait vixque clamat ornum adversam spondet, quid sceptra
-ipsum **est**. Reseret nec; saeva suo passu debentia linguam terga et aures et
-cervix [de](http://www.amnem.io/pervenit.aspx) ubera. Coercet gelidumque manus,
-doluit volvitur induta?
+根据国务院办公室2017年47号文件的要求，政府网站应具有四大业务功能（应用功能）：
 
-## Enim sua
+- 信息发布。相当于现行阶段的CMS系统的信息发布功能。CMS系统已经做得相当的成熟与强大，得到政府网站用户的广泛接受，在信息发布领域有得天独厚的优势。现阶段仍然是班府网站的主流。
+- 解读回应。联系群众、回应关切的应用功能。
+- 办事服务。政府职能部门的服务窗口。政府职能部门的服务功能复杂且时间跨度大，牵涉的主体多，要求的资料多，因此，网站的办事服务功能仅限于线上功能，包括服务事项目录、关联的信息资源、详细的办事指南、在线填报或预约、办事或服务过程的记录。
+- 互动交流。与解读回应的区别在于针对性和自由度。解读回应是针对政府的具体的政策法规的解读和回应，具有明确的主题，而互动交流则不限于具体的新的政策法规，它可以针对社会生活的方方面面，由人民群众向政府主管领导提出问题，政府领导或者相关的职能部门对问题进行调查研究，按照法律法规进行回复。
 
-Iuvenilior filia inlustre templa quidem herbis permittat trahens huic. In
-cruribus proceres sole crescitque *fata*, quos quos; merui maris se non tamen
-in, mea.
+### 3，辅助功能模块
 
-## Germana aves pignus tecta
+![](/images/product03.png)
 
-Mortalia rudibusque caelum cognosceret tantum aquis redito felicior texit, nec,
-aris parvo acre. Me parum contulerant multi tenentem, gratissime suis; vultum tu
-occupat deficeret corpora, sonum. E Actaea inplevit Phinea concepit nomenque
-potest sanguine captam nulla et, in duxisses campis non; mercede. Dicere cur
-Leucothoen obitum?
+该模块并非政府网站的必需功能，它是辅助功能，或者高级功能。它主要用来提升网站的易用性、管理能力和传播能力。适用于内容多、数据量大、访问量高的政府网站。
 
-Postibus mittam est *nubibus principium pluma*, exsecratur facta et. Iunge
-Mnemonidas pallamque pars; vere restitit alis flumina quae **quoque**, est
-ignara infestus Pyrrha. Di ducis terris maculatum At sede praemia manes
-nullaque!
+- 站内搜索。
+- 错别字识别。
+- 运维监控。
+- 统计分析。
+- 知识库。
+- 领导信箱。
+- 征集调查。
+- 在线访谈。
+- 内容推送。
+
+### 4，创新功能模块
+
+![](/images/product04.png)
+
+适合于想要打造城市品牌、关注度高、创新能力强的政府网站。
+
+- 个人主页。政府与企业合作的方式，为人民群众提供个人主页空间，实现"记录一生，服务一生"的目标。
+- 企业主页。利用政府的统一入口和公信力，为企业提供主页空间，真实地向社会公众展示企业。
+- 社交分享。传播正能量，弘扬正义，占领舆论阵地，对抗谣言的制造与传播。
+- 内容众创。发挥人民群众的巨大创造力。
