@@ -79,6 +79,32 @@ http://10.10.4.25:9876
 4.  git commit -m '修改README' //提交修改后的版本到本地仓库
 5.  git push  //推送本地仓库中的版本到中央仓库
 
+> .gitignore的重要性：为了保持仓库干净，一切无用的代码都不允许提交到版本库，包括本地环境文件，编译生成文件，过程文件。因此，必须在项目根目录上建立.gitignore文件，将需要排除的文件、目录写进去。
+
+```.gitignore 
+.idea/
+.target/
+**/target/
+.out/
+**/out/
+.build/
+**/build/
+logs/
+**/logs/
+.svn/
+**/.svn/
+.project/
+**/.project/
+.settings/
+**/.settings/
+go-config/basedir/
+
+*.iml
+**/*.iml
+**/*.gz
+**/*.log
+```
+
 ##  7，开发工具：Intellij IDEA
 
 请上官网下载：[https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
