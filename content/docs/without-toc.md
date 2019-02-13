@@ -1,57 +1,36 @@
 ---
-bookShowToc: false
+bookShowToc: true
 ---
 
-# At me ipso nepotibus nunc celebratior genus
+# 微服务架构
 
-## Tanto oblite
+## 1，什么是微服务架构
 
-Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque
-illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro
-clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens
-vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat
-admonitu concidit, ad resimas vultus et rugas vultu **dignamque** Siphnon.
+微服务(Microservices Architecture)是一种架构风格，一个软件应用由一个或多个微服务组成。系统中的各个微服务可被独立部署，各个微服务之间是松耦合的。每个微服务仅关注于完成一件任务并很好地完成该任务。在所有情况下，每个任务代表着一个小的业务能力。
 
-Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt
-dixit: ritu pharetramque. Exul Laurenti orantem modo, per densum missisque labor
-manibus non colla unum, obiectat. Tu pervia collo, fessus quae Cretenque Myconon
-crate! Tegumenque quae invisi sudore per vocari quaque plus ventis fluidos. Nodo
-perque, fugisse pectora sorores.
+![](/images/microservice01.png)
 
-## Summe promissa supple vadit lenius
+## 2，什么是前后端分离
 
-Quibus largis latebris aethera versato est, ait sentiat faciemque. Aequata alis
-nec Caeneus exululat inclite corpus est, ire **tibi** ostendens et tibi. Rigent
-et vires dique possent lumina; **eadem** dixit poma funeribus paret et felix
-reddebant ventis utile lignum.
+前端通常指浏览器或者APP，后端通常指服务器。前端处理界面逻辑，通常不存储数据(cookies除外)，所有数据都从服务器端获取；后端通常只处理存储逻辑和非界面逻辑，通过接口的方式向前端提供数据。
 
-1. Remansit notam Stygia feroxque
-2. Et dabit materna
-3. Vipereas Phrygiaeque umbram sollicito cruore conlucere suus
-4. Quarum Elis corniger
-5. Nec ieiunia dixit
+![](/images/microservice02.png)
 
-Vertitur mos ortu ramosam contudit dumque; placabat ac lumen. Coniunx Amoris
-spatium poenamque cavernis Thebae Pleiadasque ponunt, rapiare cum quae parum
-nimium rima.
+## 3，什么是单体架构
 
-## Quidem resupinus inducto solebat una facinus quae
+单体架构(Monolithic Architecture ) 是把所有功能放到同一个单体架构中去。比如：常见的ERP、CRM等系统都以单体架构的方式运行，同时由于提供了大量的业务功能，随着功能的升级，整个研发、发布、定位问题，扩展、升级这样一个“怪物”系统会变得越来越困难。
 
-Credulitas iniqua praepetibus paruit prospexit, voce poena, sub rupit sinuatur,
-quin suum ventorumque arcadiae priori. Soporiferam erat formamque, fecit,
-invergens, nymphae mutat fessas ait finge.
+![](/images/microservice03.png)
 
-1. Baculum mandataque ne addere capiti violentior
-2. Altera duas quam hoc ille tenues inquit
-3. Sicula sidereus latrantis domoque ratae polluit comites
-4. Possit oro clausura namque se nunc iuvenisque
-5. Faciem posuit
-6. Quodque cum ponunt novercae nata vestrae aratra
+##  4，单体架构的微服务化
 
-Ite extrema Phrygiis, patre dentibus, tonso perculit, enim blanda, manibus fide
-quos caput armis, posse! Nocendo fas Alcyonae lacertis structa ferarum manus
-fulmen dubius, saxa caelum effuge extremis fixum tumor adfecit **bella**,
-potentes? Dum nec insidiosa tempora tegit
-[spirarunt](http://mihiferre.net/iuvenes-peto.html). Per lupi pars foliis,
-porreximus humum negant sunt subposuere Sidone steterant auro. Memoraverit sine:
-ferrum idem Orion caelum heres gerebat fixis?
+将单体架构下的应用进行服务分离和前后端分离，达到微服务架构下的设计目标。
+
+![](/images/microservice04.png)
+
+##  5，政府网站一体化项目微服务架构
+
+采用Spring-Cloud微服务架构体系，建设政府网站一体化平台。其基本骨架为应用网关、注册与发现中心、统一配置中心、微服务群。应用网关具有负载均衡作用，还起到链路溶断的作用，同时发挥前后端分离作用。前端应用部署在Web服务器上，可以是apache,nginx,tomcat，也可以是别的服务器，移动APP本身就是前端应用。
+
+![](/images/microservice05.png)
+
