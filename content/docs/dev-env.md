@@ -8,12 +8,14 @@ bookShowToc: false
 
 IP地址：10.10.4.25
 
-公共用户：public/123456
+```
 root/*
 xnpeng/*
 chenlm/*
 zhangn/*
 zengsd/*
+public/123456
+```
 
 ##  2，Java版本：jdk1.8
 
