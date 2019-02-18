@@ -4,7 +4,7 @@ bookShowToc: false
 
 # 开发环境
 
-##  1，开发服务器：Linex/centos 7
+##  1，开发服务器：Linux/CentOS 7
 
 IP地址：10.10.4.25
 
@@ -136,8 +136,10 @@ VueJS: [https://cn.vuejs.org/](https://cn.vuejs.org/)
 
 官网：[http://element-cn.eleme.io/#/zh-CN](http://element-cn.eleme.io/#/zh-CN)
 
-##  11, 跨平台移动APP框架：Cordova
+##  11, 跨平台移动APP框架：Cordova, Flutter
 
 官网： [https://cordova.apache.org/](https://cordova.apache.org/)
+
+官网： [https://flutter.io/](https://flutter.io/)
 
 
