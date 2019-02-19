@@ -1,5 +1,5 @@
 +++
-title = "Getting Started with Hugo"
+title = "用SpringBoot + shiro 做SSO"
 description = ""
 tags = [
     "go",
@@ -7,7 +7,7 @@ tags = [
     "hugo",
     "development",
 ]
-date = "2014-04-02"
+date = "2019-02-19"
 categories = [
     "Development",
     "golang",
@@ -15,75 +15,22 @@ categories = [
 menu = "main"
 +++
 
-## Step 1. Install Hugo
+### 一些参考文章
 
-Go to [Hugo releases](https://github.com/spf13/hugo/releases) and download the
-appropriate version for your OS and architecture.
+-   [spring boot 2.0 集成 shiro 和 pac4j cas单点登录](https://www.cnblogs.com/suiyueqiannian/p/9359597.html) 2018/8/29
+-   [spring boot整合Shiro实现单点登录](https://blog.csdn.net/liuchuanhong1/article/details/76850181) 2017/8/17
+-   [Springboot+shiro单点登录实现](https://blog.csdn.net/chenjiazhu/article/details/77851860) 2017/9/5
+-   [spring boot配置单点登录](https://www.jianshu.com/p/600593b1f366) [github](https://github.com/willwu1984/springboot-cas-shiro)
+2017/3/23
+-   [Spring Boot 集成Shiro和CAS](https://blog.csdn.net/catoop/article/details/50534006) 2016/1/17
+-   [在 Web 项目中应用 Apache Shiro](https://www.ibm.com/developerworks/cn/java/j-lo-shiro/index.html) 2013/1/31
 
-Save it somewhere specific as we will be using it in the next step.
+### 进度说明
 
-More complete instructions are available at [Install Hugo](https://gohugo.io/getting-started/installing/)
-
-## Step 2. Build the Docs
-
-Hugo has its own example site which happens to also be the documentation site
-you are reading right now.
-
-Follow the following steps:
-
- 1. Clone the [Hugo repository](http://github.com/spf13/hugo)
- 2. Go into the repo
- 3. Run hugo in server mode and build the docs
- 4. Open your browser to http://localhost:1313
-
-Corresponding pseudo commands:
-
-    git clone https://github.com/spf13/hugo
-    cd hugo
-    /path/to/where/you/installed/hugo server --source=./docs
-    > 29 pages created
-    > 0 tags index created
-    > in 27 ms
-    > Web Server is available at http://localhost:1313
-    > Press ctrl+c to stop
-
-Once you've gotten here, follow along the rest of this page on your local build.
-
-## Step 3. Change the docs site
-
-Stop the Hugo process by hitting Ctrl+C.
-
-Now we are going to run hugo again, but this time with hugo in watch mode.
-
-    /path/to/hugo/from/step/1/hugo server --source=./docs --watch
-    > 29 pages created
-    > 0 tags index created
-    > in 27 ms
-    > Web Server is available at http://localhost:1313
-    > Watching for changes in /Users/spf13/Code/hugo/docs/content
-    > Press ctrl+c to stop
+由于要实现单点登录，必须先做一个sso服务供其他应用使用。浏览了一些文章，比较接近的方案是上面的第一篇文章。其他文章对学习技术逻辑有帮助，
+但不适用于我们的场景，或者版本比较旧，变化比较大，难于直接拿来用。
 
 
-Open your [favorite editor](http://vim.spf13.com) and change one of the source
-content pages. How about changing this very file to *fix the typo*. How about changing this very file to *fix the typo*.
+2018-12-22
 
-Content files are found in `docs/content/`. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-`docs/content/overview/quickstart.md`.
 
-Change and save this file.. Notice what happened in your terminal.
-
-    > Change detected, rebuilding site
-
-    > 29 pages created
-    > 0 tags index created
-    > in 26 ms
-
-Refresh the browser and observe that the typo is now fixed.
-
-Notice how quick that was. Try to refresh the site before it's finished building. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.
-
-## Step 4. Have fun
-
-The best way to learn something is to play with it.
