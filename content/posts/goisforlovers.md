@@ -26,7 +26,7 @@ menu = "main"
 
 ### 认证中心架构
 
-![架构图](images/cas_architecture.png)
+![架构图](/images/cas_architecture.png)
 
 
 ### 安装caswar
@@ -207,15 +207,15 @@ cas.authn.accept.users=casuser::Mellon
 java -jar target/cas.war
 ```
 
-![images/cas-server.png](images/cas-server.png)
+![images/cas-server.png](/images/cas-server.png)
 
 > 修改hosts,增加一行：127.0.0.1    cas.server.com
 
 打开浏览器，访问地址：```https://cas.server.com:8443/cas```
 
-![](images/cas-server-login.png)
+![](/images/cas-server-login.png)
 
 用配置文件中的静态用户和密码登录：
 
-![](images/cas-server-login-success.png)
+![](/images/cas-server-login-success.png)
 
