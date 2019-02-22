@@ -7,6 +7,7 @@ headless: true
   - [产品架构]({{< ref "/docs/with-toc.md" >}})
   - [技术架构]({{< ref "/docs/without-toc.md" >}})
   - [开发环境]({{< ref "/docs/dev-env.md" >}})
+  - [开发方案]({{< ref "/docs/dev-plan.md" >}})
 - **业务模块**
 - [容器平台]({{< ref "/docs/server.md" >}})
 - [基础服务]({{< ref "/docs/client.md" >}})
