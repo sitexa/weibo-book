@@ -110,26 +110,48 @@ bin/logstash-plugin  install logstash-input-jdbc
 #jdbc.conf
 
 input {
-    stdin {
-    }
     jdbc {
-      # mysql jdbc connection string to our backup databse
       jdbc_connection_string => "jdbc:mysql://10.10.4.25:3306/esite?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT"
-      # the user we wish to excute our statement as
       jdbc_user => "root"
       jdbc_password => "WEIbo123!@#"
-      # the path to our downloaded jdbc driver
       jdbc_driver_library => "/opt/logstash-6.6.1/mysql-connector-java-5.1.47.jar"
-      # the name of the driver class for mysql
       jdbc_driver_class => "com.mysql.jdbc.Driver"
-      # for oracle
-      # jdbc_driver_class => "Java::oracle.jdbc.driver.OracleDriver"
       jdbc_paging_enabled => "true"
       jdbc_page_size => "50000"
-      statement_filepath => "jdbc.sql"
+      statement => "select * from sys_user"
       schedule => "* * * * *"
-      type => "jdbc"
+      type => "sysuser"
     }
+}
+
+input {
+  jdbc {
+    jdbc_connection_string => "jdbc:mysql://10.10.4.25:3306/esite?characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT"
+    jdbc_user => "root"
+    jdbc_password => "WEIbo123!@#"
+    jdbc_driver_library => "/opt/logstash-6.6.1/mysql-connector-java-5.1.47.jar"
+    jdbc_driver_class => "com.mysql.jdbc.Driver"
+    jdbc_paging_enabled => "true"
+    jdbc_page_size => "50000"
+    statement => "select * from sys_org"
+    schedule => "* * * * *"
+    type => "sysorg"
+  }
+}
+
+input {
+  jdbc {
+    jdbc_connection_string => "jdbc:oracle:thin:@10.10.4.18:1521:orcl"
+    jdbc_user => "jkwwz"
+    jdbc_password => "jkwwz"
+    jdbc_driver_library => "/opt/logstash-6.6.1/ojdbc6-12.1.0.2.jar"
+    jdbc_driver_class => "Java::oracle.jdbc.driver.OracleDriver"
+    jdbc_paging_enabled => "true"
+    jdbc_page_size => "50000"
+    statement => "SELECT * FROM WWZ_LDXX_XJXX"
+    schedule => "* * * * *"
+    type => "wwzxjxx"
+  }
 }
 
 filter {
@@ -140,20 +162,28 @@ filter {
 }
 
 output {
+ if [type] == "sysuser" {
     elasticsearch {
-        hosts => ["10.10.4.25:9200"]
+      hosts => ["10.10.4.25:9200"]
+      index => "sys_user"
+      document_id => "%{uid}"
     }
-    stdout {
-        codec => json_lines
+  }
+  if [type] == "sysorg" {
+    elasticsearch {
+      hosts => ["10.10.4.25:9200"]
+      index => "sys_org"
+      document_id => "%{oid}"
     }
+  }
+  if [type] == "wwzxjxx" {
+    elasticsearch {
+      hosts => ["10.10.4.25:9200"]
+      index => "wwz_xjxx"
+      document_id => "%{id}"
+    }
+  }
 }
-```
-
-``` 
-#jdbc.sql
-
-select * from sys_user
-
 ```
 
 启动：
