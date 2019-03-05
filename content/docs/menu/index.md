@@ -14,4 +14,5 @@ headless: true
 - [后台管理]({{< ref "/docs/go-admin.md" >}})
 - [领导信箱]({{< ref "/docs/mbox.md" >}})
 - [互动交流]({{< ref "/docs/community.md" >}})
+- [搜索引擎]({{< ref "/docs/es.md" >}})
 - [**参考资料**]({{< ref "/posts" >}})
