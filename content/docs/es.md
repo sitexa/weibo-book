@@ -259,6 +259,7 @@ output {
 ```
 
 这里有几个注意点：
+
 - （1）jdbc_driver_library
         mysql-connector-java-5.1.46.jar的存放目录，这个一定要配置正确，支持全路径和相对路径。如果配置不对，将会报“can ”错误。
 - （2）sql_last_value
