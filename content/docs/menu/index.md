@@ -16,4 +16,5 @@ headless: true
 - [互动交流]({{< ref "/docs/community.md" >}})
 - [搜索引擎]({{< ref "/docs/es.md" >}})
 - [搜索操作]({{< ref "/docs/es-app.md" >}})
+- [工作流引擎]({{< ref "/docs/activiti.md" >}})
 - [**参考资料**]({{< ref "/posts" >}})

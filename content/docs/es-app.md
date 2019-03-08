@@ -1,4 +1,4 @@
-# ElasticSearch在一体化平台上的应用
+# ElasticSearch应用介绍
 
 ##  1，站内搜索
 
