@@ -1,6 +1,8 @@
 # ElasticSearch应用介绍
 
-##  1，站内搜索
+##  1，数据库搜索
+
+数据库搜索是将数据库内容复制到Elasticsearch中进行搜引，再利用elasticsearch进行搜索和展示。
 
 ##  2，logstash
 

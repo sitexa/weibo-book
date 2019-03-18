@@ -3,8 +3,8 @@ headless: true
 ---
 
 - [ES介绍]({{< ref "/docs/es/es.md" >}})
-- [站内搜索]({{< ref "/docs/es/es-site.md" >}})
-- [APP搜索]({{< ref "/docs/es/es-app.md" >}})
+- [网站搜索和APP搜索]({{< ref "/docs/es/es-site.md" >}})
+- [数据库搜索]({{< ref "/docs/es/es-app.md" >}})
 - [性能监控]({{< ref "/docs/es/es-apm.md" >}})
 - [Document APIs]({{< ref "/docs/es/doc-api.md" >}})
 - [Search APIs]({{< ref "/docs/es/search-api.md" >}})
