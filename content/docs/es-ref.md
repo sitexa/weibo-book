@@ -2,7 +2,11 @@
 headless: true
 ---
 
-- **Getting Started**
+- [ES介绍]({{< ref "/docs/es/es.md" >}})
+- [站内搜索]({{< ref "/docs/es/es-site.md" >}})
+- [APP搜索]({{< ref "/docs/es/es-app.md" >}})
+- [性能监控]({{< ref "/docs/es/es-apm.md" >}})
+- **安装与升级**
   - [Setup]({{< ref "/docs/es/es-setup.md" >}})
   - [Upgrade]({{< ref "/docs/es/es-upgrade.md" >}})
   - [Convention]({{< ref "/docs/es/es-convention.md" >}})
