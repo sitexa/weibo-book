@@ -4,13 +4,13 @@ headless: true
 
 - [**项目介绍**]({{< ref "/" >}})
 - **项目架构**
-  - [产品架构]({{< ref "/docs/with-toc.md" >}})
-  - [技术架构]({{< ref "/docs/without-toc.md" >}})
+  - [产品架构]({{< ref "/docs/product-platform.md" >}})
+  - [技术架构]({{< ref "/docs/architecture.md" >}})
   - [开发环境]({{< ref "/docs/dev-env.md" >}})
   - [开发方案]({{< ref "/docs/dev-plan.md" >}})
 - **业务模块**
-- [容器平台]({{< ref "/docs/server.md" >}})
-- [基础服务]({{< ref "/docs/client.md" >}})
+- [容器平台]({{< ref "/docs/container.md" >}})
+- [基础服务]({{< ref "/docs/base-service.md" >}})
 - [后台管理]({{< ref "/docs/go-admin.md" >}})
 - [领导信箱]({{< ref "/docs/mbox.md" >}})
 - [互动交流]({{< ref "/docs/community.md" >}})
