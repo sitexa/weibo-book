@@ -1,5 +1,10 @@
 # elasticsearch-analysis-ik(分词和拼音、同义词)
 
+- *分析*```analysis```
+- *分析器*```analyzer```
+- *分词器*```tokenizer```
+- *过滤器*```filter```
+
 ##  安装中文分词插件
 
 ``` 
@@ -167,6 +172,42 @@ GET blog/article/_validate/query?explain
 }
 ```
 
+##  关闭/打开/重新索引
+
+``` 
+POST web_document/_close
+```
+
+``` 
+POST web_document/_open
+```
+
+``` 
+
+```
+
+##  配置同义词
+
+``` 
+PUT web_document/_settings?preserve_existing=true
+{
+  "index.analysis.analyzer.ik_syno.filter" : [
+    "my_synonym_filter"
+  ],
+  "index.analysis.analyzer.ik_syno.tokenizer" : "ik_max_word",
+  "index.analysis.analyzer.ik_syno.type" : "custom",
+  "index.analysis.analyzer.ik_syno_smart.filter" : [
+    "my_synonym_filter"
+  ],
+  "index.analysis.analyzer.ik_syno_smart.tokenizer" : "ik_smart",
+  "index.analysis.analyzer.ik_syno_smart.type" : "custom",
+  "index.analysis.filter.my_synonym_filter.synonyms_path" : "synonyms.txt",
+  "index.analysis.filter.my_synonym_filter.type" : "synonym"
+}'
+```
+
+> 网上很多博客修改 elasticsearch.yml 的做法，在 es6 中无法使用。
+
 # web_document执行步骤
 
 ##  （1）创建索引、匹配分词器
@@ -299,5 +340,64 @@ POST /web_document/doc/_search
         "fields":["title", "title.pinyin", "contents", "contents.pinyin"]
       }
     }
+}
+```
+
+##  建立索引，配置分析器，分词器，过滤器
+
+先关闭index, 修改之后再打开index
+
+```
+PUT /web_document/
+{
+	"settings":{
+		"number_of_shards": 3,
+		"number_of_replicas": 1,
+		"analysis": {
+        "analyzer": {
+				  "default":{
+					  "tokenizer":"ik_max_word"
+				  },				
+          "pinyin_analyzer": {
+            "type": "custom",
+            "tokenizer": "my_pinyin",
+            "filter": ["word_delimiter"]
+          },
+          "ik_syno_smart": {
+            "type":"custom",
+            "tokenizer":"ik_smart",
+            "filter": ["my_stop_filter", "my_syno_filter"],
+              "char_filter" : ["my_char_filter"]
+          }
+        },
+        "filter" : {
+            "my_stop_filter" : {
+                "type" : "stop",
+                "stopwords" : [" "]
+            },
+            "my_syno_filter" : {
+                "type" : "synonym",
+                "synonyms_path" : "analysis-synonym/synonyms.txt"
+            }
+        },
+        "char_filter" : {
+            "my_char_filter" : {
+                "type" : "mapping",
+                "mappings" : ["| => |"]
+            }
+        },
+        "tokenizer": {
+          "my_pinyin" : {
+            "type" : "pinyin",
+            "keep_first_letter":true,
+            "keep_separate_first_letter" : false,
+            "keep_full_pinyin" : true,
+            "keep_original" : false,
+            "limit_first_letter_length" : 16,
+            "lowercase" : true
+            }
+        }
+    }
+	}
 }
 ```
