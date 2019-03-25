@@ -20,10 +20,11 @@ Logstash 是开源的服务器端数据处理管道，能够同时从多个来�
 
 数据从源传输到存储库的过程中，Logstash 过滤器能够解析各个事件，识别已命名的字段以构建结构，并将它们转换成通用格式，以便更轻松、更快速地分析和实现商业价值。
 
-利用 Grok 从非结构化数据中派生出结构
-从 IP 地址破译出地理坐标
-将 PII 数据匿名化，完全排除敏感字段
-简化整体处理，不受数据源、格式或架构的影响
+- 利用 Grok 从非结构化数据中派生出结构
+- 从 IP 地址破译出地理坐标
+- 将 PII 数据匿名化，完全排除敏感字段
+- 简化整体处理，不受数据源、格式或架构的影响
+
 我们的过滤器库丰富多样，拥有无限可能。
 
 ### 输出
@@ -132,7 +133,7 @@ Please note that if any of the statements use the sql_last_value parameter (e.g.
 {"took":2,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},"hits":{"total":1,"max_score":1.0,"hits":[{"_index":"accounts","_type":"person","_id":"2","_score":1.0,"_source":{"name":"Oscar","lastname":"Peng","job_description":"architecture"}}]}}
 ```
 
-9,url -H 'Content-Type:application/x-ndjson' -XPOST 'localhost:9200/bank/shakespeare/_bulk?pretty' --data-binary @shakespeare.json
+9,curl -H 'Content-Type:application/x-ndjson' -XPOST 'localhost:9200/bank/shakespeare/_bulk?pretty' --data-binary @shakespeare.json
 
 curl localhost:9200/_cat/indices?v
 

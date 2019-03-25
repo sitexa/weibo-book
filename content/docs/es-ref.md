@@ -5,6 +5,7 @@ headless: true
 - [ES介绍]({{< ref "/docs/es/es.md" >}})
 - [站点内搜索和应用内搜索]({{< ref "/docs/es/es-site.md" >}})
 - [数据库搜索]({{< ref "/docs/es/es-app.md" >}})
+- [中文分词、拼音搜索、同义词搜索]({{< ref "/docs/es/es-ik.md" >}})
 - [性能监控]({{< ref "/docs/es/es-apm.md" >}})
 - [Document APIs]({{< ref "/docs/es/doc-api.md" >}})
 - [Search APIs]({{< ref "/docs/es/search-api.md" >}})
