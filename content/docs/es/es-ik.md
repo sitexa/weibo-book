@@ -63,7 +63,7 @@ PUT /blog/_mapping/article
 		"title" : {
 			"type" : "text",
 			"analyzer" : "ik_max_word",
-			"include_in_all" : true,
+			"copy_to" : true,
 			"fields" : {
 				"pinyin" : {
 					"type" : "text",
