@@ -12,12 +12,12 @@ headless: true
 
 大数据最根本之处在于信息收集方式出现了重大变化与革新。大数据的出现与大量信息直接在网络呈现关系非常紧密。
 
-![](/static/images/bigdata01.png)
+![](/images/bigdata01.png)
 
 微博、天猫、淘宝、微信等等都直接产生了大量包括定位、消息记录、消费记录、评价、阅读等等极为庞大的信息，可以说互联网企业都自然的带有数据企业的标签。
 不过如果我们从数据的源头看的更仔细一些，还是会发现，其实很多数据依然是有巨大的采集与归类的需求。
 
-![](/static/images/bigdata02.png)
+![](/images/bigdata02.png)
 
 ##  大数据工具集：Hadoop、Hive、Spark 
 
@@ -79,7 +79,7 @@ Hadoop不断衍生和进化各种分支流派，其中最激烈的当属计算�
 
 ##  大数据图谱
 
-![](/static/images/bigdata03.png)
+![](/images/bigdata03.png)
 
 - HBase：是一个高可靠性、高性能、面向列、可伸缩的分布式存储系统，利用HBase技术可在廉价PC Server上搭建起大规模结构化数据集群。
 - Pig：Yahoo开发的，并行地执行数据流处理的引擎，它包含了一种脚本语言，称为Pig Latin，用来描述这些数据流。Pig Latin本身提供了许多传统的数据操作，同时允许用户自己开发一些自定义函数用来读取、处理和写数据。在LinkedIn也是大量使用。
@@ -125,7 +125,7 @@ ref: https://www.zhihu.com/question/26568496 用心阁的回答。
 
 ##  大数据技术栈
 
-![](/static/images/bigdata04.png)
+![](/images/bigdata04.jpeg)
 
 - a.蓝色部分，是Hadoop生态系统组件，黄色部分是Spark生态组件，虽然他们是两种不同的大数据处理框架，但它们不是互斥的，Spark与hadoop 中的MapReduce是一种相互共生的关系。Hadoop提供了Spark许多没有的功能，比如分布式文件系统，而Spark 提供了实时内存计算，速度非常快。有一点大家要注意，Spark并不是一定要依附于Hadoop才能生存，除了Hadoop的HDFS，还可以基于其他的云平台，当然啦，大家一致认为Spark与Hadoop配合默契最好摆了。
 
